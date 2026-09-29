@@ -13,7 +13,11 @@ export function useTaskExitPersist(
   const pendingRef = useRef(false);
   const persistRef = useRef(persist);
 
-  persistRef.current = persist;
+  // El efecto de desmontaje depende de [], así que necesita leer el persist más
+  // reciente a través del ref en lugar de capturar el del primer render.
+  useEffect(() => {
+    persistRef.current = persist;
+  });
 
   const persistSafe = (): boolean => {
     try {
