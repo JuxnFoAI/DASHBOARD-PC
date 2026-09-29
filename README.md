@@ -2,6 +2,12 @@
 
 Tablero de tareas en el navegador. Los datos se quedan en este equipo. Con clave, van cifrados. Sin clave, quedan en claro en este navegador.
 
+## Mapa
+
+Cada color es un grupo. El centro es la app.
+
+![Mapa mental de Dashboard PC. Entrada abre Puerta. Cascarón abre Marco. Vistas abre Layout, Tablero y Gráficas. Acciones abre Buscar y Hoy. Archivo abre Datos y Papelera.](src/assets/mapa-mental.svg)
+
 ## Uso
 
 La barra izquierda abre cada parte. Layout muestra el conteo de cada vista y una lista corta de lo urgente: vencidas, luego bloqueadas, luego en curso. El tablero enseña una vista a la vez: Vencidas, Por hacer, En curso, Hechas o Bloqueadas. Vencidas sale de la fecha; no es un estado. Gráficas cuenta esas mismas vistas. Hoy junta vencidas y en curso. Buscar filtra por título o por la nota. Lo eliminado va a la papelera hasta que lo borres del todo.
@@ -28,6 +34,10 @@ No hay cuenta ni servidor. Si activas la clave, cifra las tareas en el navegador
 En Datos, el candado activa o desactiva la clave. Sin clave, las tareas y el JSON exportado quedan en claro: cualquiera con este navegador puede leerlos. Con clave, el JSON va cifrado. El PDF siempre es una copia legible. Importar un JSON sustituye el tablero. Un respaldo antiguo en claro se puede importar una vez.
 
 No hace falta `.env`. `VITE_API_BASE_URL` está vacío porque no hay API.
+
+## Decisiones
+
+El porqué de las elecciones, las vías que se dejaron y los arreglos están en [DECISIONES.md](DECISIONES.md).
 
 ## Código
 
