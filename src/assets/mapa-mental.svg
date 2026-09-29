@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 440" role="img">
+  <title>Mapa mental de Dashboard PC</title>
+  <desc>Dashboard PC se divide en Entrada (Puerta), Cascar&#243;n, Vistas (Layout, Tablero y Gr&#225;ficas), Acciones (Buscar y Hoy) y Archivo (Datos y Papelera).</desc>
+  <rect width="1100" height="440" rx="20" fill="#f6f7f9"/>
+
+  <path d="M550 94 C550 114 150 114 150 132" fill="none" stroke="#3b6fd8" stroke-width="2"/>
+  <path d="M550 94 C550 114 350 114 350 132" fill="none" stroke="#7c4ddb" stroke-width="2"/>
+  <path d="M550 94 L550 132" fill="none" stroke="#2f8f6b" stroke-width="2"/>
+  <path d="M550 94 C550 114 750 114 750 132" fill="none" stroke="#1a8aa3" stroke-width="2"/>
+  <path d="M550 94 C550 114 950 114 950 132" fill="none" stroke="#d86a1f" stroke-width="2"/>
+
+  <path d="M150 178 L150 276" fill="none" stroke="#3b6fd8" stroke-width="2"/>
+  <path d="M350 178 L350 276" fill="none" stroke="#7c4ddb" stroke-width="2"/>
+  <path d="M550 178 L550 214" fill="none" stroke="#2f8f6b" stroke-width="2"/>
+  <path d="M550 268 L550 276" fill="none" stroke="#2f8f6b" stroke-width="2"/>
+  <path d="M550 330 L550 338" fill="none" stroke="#2f8f6b" stroke-width="2"/>
+  <path d="M750 178 L750 245" fill="none" stroke="#1a8aa3" stroke-width="2"/>
+  <path d="M750 299 L750 307" fill="none" stroke="#1a8aa3" stroke-width="2"/>
+  <path d="M950 178 L950 245" fill="none" stroke="#d86a1f" stroke-width="2"/>
+  <path d="M950 299 L950 307" fill="none" stroke="#d86a1f" stroke-width="2"/>
+
+  <rect x="420" y="22" width="260" height="72" rx="14" fill="#1a1d25"/>
+  <text x="550" y="50" text-anchor="middle" fill="#e8eaef" font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="650">Dashboard PC</text>
+  <text x="550" y="72" text-anchor="middle" fill="#a8aeb8" font-family="Segoe UI, system-ui, sans-serif" font-size="12">Tablero en este navegador</text>
+
+  <rect x="60" y="132" width="180" height="46" rx="12" fill="#e7f0ff" stroke="#3b6fd8" stroke-width="1.5"/>
+  <text x="150" y="160" text-anchor="middle" fill="#1e3a5f" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="650">Entrada</text>
+
+  <rect x="260" y="132" width="180" height="46" rx="12" fill="#f0e9ff" stroke="#7c4ddb" stroke-width="1.5"/>
+  <text x="350" y="160" text-anchor="middle" fill="#3b2764" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="650">Cascar&#243;n</text>
+
+  <rect x="460" y="132" width="180" height="46" rx="12" fill="#e5f6ee" stroke="#2f8f6b" stroke-width="1.5"/>
+  <text x="550" y="160" text-anchor="middle" fill="#14543c" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="650">Vistas</text>
+
+  <rect x="660" y="132" width="180" height="46" rx="12" fill="#e5f7fb" stroke="#1a8aa3" stroke-width="1.5"/>
+  <text x="750" y="160" text-anchor="middle" fill="#0f4c5c" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="650">Acciones</text>
+
+  <rect x="860" y="132" width="180" height="46" rx="12" fill="#fff1e6" stroke="#d86a1f" stroke-width="1.5"/>
+  <text x="950" y="160" text-anchor="middle" fill="#6b3410" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="650">Archivo</text>
+
+  <rect x="60" y="276" width="180" height="54" rx="10" fill="#ffffff" stroke="#3b6fd8" stroke-width="1.5"/>
+  <text x="150" y="298" text-anchor="middle" fill="#1e3a5f" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="650">Puerta</text>
+  <text x="150" y="316" text-anchor="middle" fill="#3b6fd8" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Pide la clave</text>
+
+  <rect x="260" y="276" width="180" height="54" rx="10" fill="#ffffff" stroke="#7c4ddb" stroke-width="1.5"/>
+  <text x="350" y="298" text-anchor="middle" fill="#3b2764" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="650">Marco</text>
+  <text x="350" y="316" text-anchor="middle" fill="#7c4ddb" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Barra y cabecera</text>
+
+  <rect x="460" y="214" width="180" height="54" rx="10" fill="#ffffff" stroke="#2f8f6b" stroke-width="1.5"/>
+  <text x="550" y="236" text-anchor="middle" fill="#14543c" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="650">Layout</text>
+  <text x="550" y="254" text-anchor="middle" fill="#2f8f6b" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Conteo y urgente</text>
+
+  <rect x="460" y="276" width="180" height="54" rx="10" fill="#ffffff" stroke="#2f8f6b" stroke-width="1.5"/>
+  <text x="550" y="298" text-anchor="middle" fill="#14543c" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="650">Tablero</text>
+  <text x="550" y="316" text-anchor="middle" fill="#2f8f6b" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Una vista a la vez</text>
+
+  <rect x="460" y="338" width="180" height="54" rx="10" fill="#ffffff" stroke="#2f8f6b" stroke-width="1.5"/>
+  <text x="550" y="360" text-anchor="middle" fill="#14543c" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="650">Gr&#225;ficas</text>
+  <text x="550" y="378" text-anchor="middle" fill="#2f8f6b" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Las vistas, contadas</text>
+
+  <rect x="660" y="245" width="180" height="54" rx="10" fill="#ffffff" stroke="#1a8aa3" stroke-width="1.5"/>
+  <text x="750" y="267" text-anchor="middle" fill="#0f4c5c" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="650">Buscar</text>
+  <text x="750" y="285" text-anchor="middle" fill="#1a8aa3" font-family="Segoe UI, system-ui, sans-serif" font-size="11">T&#237;tulo o nota</text>
+
+  <rect x="660" y="307" width="180" height="54" rx="10" fill="#ffffff" stroke="#1a8aa3" stroke-width="1.5"/>
+  <text x="750" y="329" text-anchor="middle" fill="#0f4c5c" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="650">Hoy</text>
+  <text x="750" y="347" text-anchor="middle" fill="#1a8aa3" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Vencidas y en curso</text>
+
+  <rect x="860" y="245" width="180" height="54" rx="10" fill="#ffffff" stroke="#d86a1f" stroke-width="1.5"/>
+  <text x="950" y="267" text-anchor="middle" fill="#6b3410" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="650">Datos</text>
+  <text x="950" y="285" text-anchor="middle" fill="#d86a1f" font-family="Segoe UI, system-ui, sans-serif" font-size="11">JSON, PDF y clave</text>
+
+  <rect x="860" y="307" width="180" height="54" rx="10" fill="#ffffff" stroke="#d86a1f" stroke-width="1.5"/>
+  <text x="950" y="329" text-anchor="middle" fill="#6b3410" font-family="Segoe UI, system-ui, sans-serif" font-size="14" font-weight="650">Papelera</text>
+  <text x="950" y="347" text-anchor="middle" fill="#d86a1f" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Hasta borrarlo del todo</text>
+</svg>
