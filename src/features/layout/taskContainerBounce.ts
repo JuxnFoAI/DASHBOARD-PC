@@ -1,7 +1,8 @@
 import gsap from "gsap";
-
-const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const NO_REDUCED_MOTION_QUERY = "(prefers-reduced-motion: no-preference)";
+import {
+  NO_REDUCED_MOTION_QUERY,
+  REDUCED_MOTION_QUERY,
+} from "@/lib/motion.ts";
 
 const TASK_BOUNCE_Y_PX = -4;
 const TASK_BOUNCE_DURATION_S = 0.38;

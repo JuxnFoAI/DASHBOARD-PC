@@ -5,8 +5,9 @@ export const MOTION_DURATION_S = 0.45;
 export const MOTION_EASE = "power2.out";
 const FADE_IN_Y_PX = 12;
 
-const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const NO_REDUCED_MOTION_QUERY = "(prefers-reduced-motion: no-preference)";
+/** Consultas de accesibilidad que reparten cada animación entre estado final y tween. */
+export const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
+export const NO_REDUCED_MOTION_QUERY = "(prefers-reduced-motion: no-preference)";
 
 const TOOLTIP_POP_EASE = "elastic.out(1.2, 0.3)";
 const TOOLTIP_HIDE_EASE = "power3.in";

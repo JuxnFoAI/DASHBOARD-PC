@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState, type FocusEvent, type FormEvent, type ReactNode } from "react";
+import { prefersReducedMotion } from "@/lib/layout.ts";
 import {
   createVaultEntryReady,
   type VaultEntryReadyHandle,
 } from "../createVaultEntryReady.ts";
 import { isVaultEntryOpen } from "../isVaultEntryOpen.ts";
-
-const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
 type VaultFormNotice = {
   id: string;
@@ -44,16 +43,16 @@ export function VaultFormCard({
   const [isHovering, setIsHovering] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [hasValue, setHasValue] = useState(false);
-  const [prefersReducedMotion] = useState(readPrefersReducedMotion);
+  const [isReducedMotion] = useState(prefersReducedMotion);
   const isOpen = isVaultEntryOpen({
     hasError,
     hasValue,
     isBusy,
     isFocused,
     isHovering,
-    prefersReducedMotion,
+    prefersReducedMotion: isReducedMotion,
   });
-  const trackClassName = prefersReducedMotion
+  const trackClassName = isReducedMotion
     ? "grid grid-rows-[1fr]"
     : "grid grid-rows-[0fr]";
 
@@ -162,10 +161,6 @@ export function VaultFormCard({
       </div>
     </form>
   );
-}
-
-function readPrefersReducedMotion(): boolean {
-  return window.matchMedia(REDUCED_MOTION_QUERY).matches;
 }
 
 function passphraseInput(form: HTMLFormElement | null): HTMLInputElement | null {

@@ -1,12 +1,15 @@
 /** Motion del alta: label del +, revelado del compositor y scramble del título. */
 import gsap from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
-import { MOTION_DURATION_S, MOTION_EASE } from "@/lib/motion.ts";
+import {
+  MOTION_DURATION_S,
+  MOTION_EASE,
+  NO_REDUCED_MOTION_QUERY,
+  REDUCED_MOTION_QUERY,
+} from "@/lib/motion.ts";
 
 gsap.registerPlugin(ScrambleTextPlugin);
 
-const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const NO_REDUCED_MOTION_QUERY = "(prefers-reduced-motion: no-preference)";
 const LABEL_HOLD_S = 1.4;
 const PUSH_IN_Y_PERCENT = 100;
 const PUSH_OUT_Y_PERCENT = -100;

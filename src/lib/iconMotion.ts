@@ -1,10 +1,13 @@
 /** Hover de iconos y cambio sol/luna. GSAP, con reduced motion en estado final. */
 import gsap from "gsap";
 import { prefersReducedMotion } from "./layout.ts";
-import { MOTION_DURATION_S, MOTION_EASE } from "./motion.ts";
+import {
+  MOTION_DURATION_S,
+  MOTION_EASE,
+  NO_REDUCED_MOTION_QUERY,
+  REDUCED_MOTION_QUERY,
+} from "./motion.ts";
 
-const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const NO_REDUCED_MOTION_QUERY = "(prefers-reduced-motion: no-preference)";
 const THEME_GLYPH_FROM_DEG = -28;
 
 export function tweenIconParts(

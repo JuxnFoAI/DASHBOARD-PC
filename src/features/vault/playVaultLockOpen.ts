@@ -1,8 +1,11 @@
 import gsap from "gsap";
-import { MOTION_DURATION_S, MOTION_EASE } from "@/lib/motion.ts";
+import {
+  MOTION_DURATION_S,
+  MOTION_EASE,
+  NO_REDUCED_MOTION_QUERY,
+  REDUCED_MOTION_QUERY,
+} from "@/lib/motion.ts";
 
-const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const NO_REDUCED_MOTION_QUERY = "(prefers-reduced-motion: no-preference)";
 const CLOSED_COLOR = "--color-status-blocked";
 const OPEN_COLOR = "--color-status-done";
 const VIEWBOX_UNITS = 24;

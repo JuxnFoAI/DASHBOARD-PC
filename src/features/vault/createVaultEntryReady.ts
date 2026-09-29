@@ -1,8 +1,11 @@
 import gsap from "gsap";
-import { MOTION_DURATION_S, MOTION_EASE } from "@/lib/motion.ts";
+import {
+  MOTION_DURATION_S,
+  MOTION_EASE,
+  NO_REDUCED_MOTION_QUERY,
+  REDUCED_MOTION_QUERY,
+} from "@/lib/motion.ts";
 
-const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const NO_REDUCED_MOTION_QUERY = "(prefers-reduced-motion: no-preference)";
 const CARD_LIFT_Y = -4;
 const ENTRY_APPEAR_S = 0.2;
 const CLOSED_ROWS = "0fr";
