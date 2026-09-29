@@ -1,0 +1,26 @@
+---
+description: Documentación mínima y comentarios que aportan
+alwaysApply: true
+---
+
+# Documentación mínima
+
+Documenta lo que el código no puede decir solo. Nada de comentarios que narran lo obvio.
+
+## Qué sí
+
+- `README.md` en raíz: qué es, cómo instalar, cómo correr, estructura clave. Actualízalo si cambia el arranque.
+- `.env.example` con claves vacías y una línea de para qué sirve cada una.
+- JSDoc/docstring en funciones públicas no obvias (fórmulas, invariantes, efectos secundarios).
+- Un comentario de una línea al inicio de un módulo solo si el nombre no basta.
+
+```ts
+/** Convierte ticks de rendimiento de Windows a porcentaje 0–100. */
+function toCpuPercent(idle: number, total: number): number {}
+```
+
+## Qué no
+
+- No generes markdown extra (`CHANGELOG`, wiki, docs/) salvo que el usuario lo pida.
+- No comentes cada línea. Si hace falta, el código está mal nombrado.
+- No dejes comentarios desactualizados: o los actualizas o los borras.

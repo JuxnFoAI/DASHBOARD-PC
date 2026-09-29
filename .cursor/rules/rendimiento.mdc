@@ -1,0 +1,22 @@
+---
+description: Rendimiento del dashboard: listas, timers y trabajo innecesario
+alwaysApply: true
+---
+
+# Rendimiento
+
+Primero correcto, luego rápido. En un dashboard, lo que más duele son timers, re-renders y listas grandes.
+
+## Obligatorio
+
+- Limpia `setInterval`, listeners e IPC al desmontar. Sin fugas.
+- Listas: key estable (id, no índice) y no recrees objetos/handlers en cada tick si se puede evitar.
+- Imágenes con tamaño conocido (evita layout shift).
+- No recalcules en el render trabajo pesado: memo / `useMemo` / derivado en el store solo cuando se mida o sea obvio.
+
+## No hagas
+
+- No pidas de nuevo en cada render. Debounce búsquedas (~300 ms).
+- No cargues una librería de charts/animación “por si acaso”.
+- No pongas `console.log` en un loop de métricas.
+- No optimices a ciegas ni añadas memo en todo “preventivamente”.

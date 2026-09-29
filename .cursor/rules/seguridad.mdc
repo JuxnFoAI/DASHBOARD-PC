@@ -1,0 +1,37 @@
+---
+description: Seguridad por defecto en Dashboard PC (secretos, validación, superficie de ataque)
+alwaysApply: true
+---
+
+# Seguridad
+
+La seguridad se nota en el diseño, no en comentarios. Asume que todo dato externo es no confiable: APIs, formularios, archivos, métricas del sistema, query params.
+
+## Secretos y configuración
+
+- Nunca hardcodees API keys, tokens, contraseñas ni connection strings.
+- Usa variables de entorno. El `.env` no se commitea; documenta solo `.env.example` sin valores reales.
+- No loguees tokens, cookies, PII ni payloads completos de auth.
+
+## Validación y límites
+
+- Valida y sanitiza entradas en el **servidor / proceso de confianza**, no solo en la UI.
+- Autoriza cada acción: autenticación ≠ autorización.
+- Principio de mínimo privilegio: el dashboard no pide más permisos de OS/red de los que necesita.
+- No ejecutes comandos de sistema con input interpolado. Listas blancas, nunca concatenar shells.
+- Escapa/serializa salida para evitar XSS. Parametriza consultas (nunca SQL/comandos a mano).
+
+```ts
+// MAL
+exec(`tasklist | findstr ${userQuery}`);
+
+// BIEN
+const processName = assertAllowedProcess(userQuery);
+getProcessInfo(processName); // API tipada, sin shell
+```
+
+## Frontend
+
+- No guardes secretos en el cliente. Lo que está en el bundle es público.
+- Cabeceras de seguridad y CORS estrictos cuando haya backend.
+- Dependencias: no añadas paquetes por comodidad; revisa que se mantengan.

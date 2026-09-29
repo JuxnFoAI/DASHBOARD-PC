@@ -1,0 +1,33 @@
+---
+description: Criterios de refactorización y código limpio en cada cambio
+alwaysApply: true
+---
+
+# Refactorización
+
+Antes de entregar, revisa el diff como si fuera un code review ajeno. Si detectas un patrón malo en el código que tocas, corrígelo. Si está fuera de alcance, menciónalo; no reescribas el repo entero.
+
+## Principios
+
+- Una función hace **una sola cosa**. Si la descripción necesita “y”, divídela.
+- Máximo ~30 líneas por función. Si crece, extrae.
+- DRY: si la misma lógica aparece dos veces, extrae. No abstraigas a la primera coincidencia superficial.
+- KISS: si se puede simplificar sin perder claridad, simplifícalo.
+- Composición sobre herencia.
+- Prefiere `const`. Sin `var`. Sin números mágicos.
+
+```ts
+// MAL
+const r = raw * 0.01;
+
+// BIEN
+const CPU_PERCENT_FACTOR = 0.01;
+const cpuPercent = rawUsage * CPU_PERCENT_FACTOR;
+```
+
+## Qué no hacer
+
+- No dejes código comentado ni `console.log` / `print` de depuración.
+- No optimices prematuramente: primero correcto, luego medido.
+- No uses una librería para lo que el lenguaje o el proyecto ya resuelven.
+- No dejes `TODO` sin contexto (qué falta y por qué no se hizo ahora).

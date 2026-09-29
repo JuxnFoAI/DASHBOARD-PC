@@ -1,0 +1,27 @@
+---
+description: Git, commits y qué no debe entrar al repositorio
+alwaysApply: true
+---
+
+# Git y entregas
+
+No hagas commit ni push salvo que el usuario lo pida. Cuando lo pida: un commit = un propósito.
+
+## Mensajes (Conventional Commits)
+
+- `feat:` funcionalidad
+- `fix:` bug
+- `refactor:` mismo comportamiento, mejor código
+- `docs:` documentación
+- `chore:` config, dependencias
+- `style:` formato, no lógica
+
+Ejemplo: `feat: add CPU widget with loading and error states`
+
+## Nunca al repo
+
+- `.env`, secretos, claves, dumps, `node_modules`, `dist`, `.DS_Store`
+- Archivos personales, capturas sueltas, `*.log`
+- Código que no compile o deje el árbol a medias
+
+Si un commit mezcla feat + fix + format, sepáralo.

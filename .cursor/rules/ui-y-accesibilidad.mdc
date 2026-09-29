@@ -1,0 +1,26 @@
+---
+description: UI, tokens de diseño y accesibilidad del dashboard
+alwaysApply: true
+---
+
+# UI y accesibilidad
+
+La interfaz debe verse intencional y usarse con teclado. Un dashboard denso no es excusa para ignorar foco, contraste ni semántica.
+
+## Diseño
+
+- Tokens en un solo sitio (`styles/` o theme): color, espacio, radio, sombra, z-index. Cero hex/px mágicos en componentes.
+- Una convención de estilos y se mantiene (utility-first o CSS modules; no las dos a la vez).
+- Mobile-first. Hover, focus visible y transiciones en controles interactivos.
+- Sin `style=""` inline salvo un valor realmente dinámico (p. ej. ancho de una barra).
+
+## Accesibilidad
+
+- HTML semántico: `button` para acciones, `a` para navegación, headings en orden.
+- Todo control con nombre accesible (`aria-label` si el texto visible no basta).
+- No transmitas estado solo con color (CPU alta = color + texto o icono).
+- Foco nunca `outline: none` sin un reemplazo visible.
+
+## Copy
+
+Textos de UI en el idioma del usuario del producto (español, salvo que se pida i18n). Cortos y concretos.

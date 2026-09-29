@@ -1,0 +1,41 @@
+---
+description: Prevención de errores, tipado y estados de UI en Dashboard PC
+alwaysApply: true
+---
+
+# Evitar errores
+
+Código defensivo: valida entradas, maneja fallos, no asumas nada. Ejecuta el flujo mentalmente (éxito, vacío, error, timeout) antes de darlo por bueno.
+
+## Tipado y datos
+
+- Tipado estricto siempre que el lenguaje lo permita. Sin `any` salvo justificación breve.
+- Usa `unknown` + narrowing en fronteras (JSON, IPC, APIs, OS).
+- Normaliza datos externos a tipos del dominio antes de pintarlos.
+- Nulos y undefined se manejan en explícito: no encadenes optional chaining para ocultar bugs.
+
+```ts
+// MAL
+try { await loadWidgets(); } catch (e) {}
+
+// BIEN
+try {
+  await loadWidgets();
+} catch (error) {
+  logger.error("No se pudieron cargar los widgets", { error });
+  throw new WidgetLoadError("No se pudieron cargar los widgets", { cause: error });
+}
+```
+
+## UI del dashboard
+
+Todo panel/widget tiene cuatro estados: **loading**, **empty**, **error**, **success**. El usuario siempre sabe qué pasa y qué puede hacer.
+
+- Errores de usuario: mensaje accionable (“No se pudo leer la CPU. Reintentar.”), nunca stack traces crudos.
+- No bloquees todo el dashboard por el fallo de un widget.
+- Evita condiciones de carrera: cancela requests al desmontar o al cambiar de filtro.
+
+## Calidad
+
+- No copies un patrón de otro repo sin comprobar que encaja aquí.
+- Si tocas un flujo, verifica bordes: 0 ítems, red caída, permiso denegado, dato a destiempo.

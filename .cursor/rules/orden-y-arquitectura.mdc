@@ -1,0 +1,44 @@
+---
+description: Orden, estructura de carpetas y limpieza del proyecto Dashboard PC
+alwaysApply: true
+---
+
+# Orden y arquitectura
+
+La estructura debe ser **obvia**. Un desarrollador nuevo entiende el proyecto en menos de 5 minutos.
+
+## Estructura objetivo (por dominio)
+
+```
+src/
+├── assets/          # Imágenes, fuentes, iconos estáticos
+├── components/      # UI reutilizable (sin lógica de negocio)
+├── features/        # Módulos autónomos por dominio
+│   └── <feature>/
+│       ├── components/
+│       ├── hooks/
+│       ├── services/
+│       ├── store/
+│       ├── types/
+│       └── index.ts
+├── hooks/           # Hooks globales
+├── lib/             # Helpers y constantes
+├── services/        # HTTP, auth, sistema, persistencia
+├── store/           # Estado global
+├── styles/          # Tokens, reset, temas
+└── types/           # Tipos compartidos
+```
+
+## Reglas
+
+- Agrupa por **feature/dominio**, no por tipo de archivo a escala global.
+- Cada carpeta pública exporta por `index` solo lo que el resto debe ver.
+- Archivo = lo que exporta: `useSystemMetrics.ts`, `WidgetCard.tsx`.
+- Sin imports relativos profundos (`../../../`). Usa aliases (`@/`, `@features/`).
+- No dejes archivos huérfanos, duplicados, “copy”, ni carpetas vacías.
+- Assets estáticos viven en `src/assets/` (o `public/` si no se importan). Nunca sueltos en la raíz.
+
+```ts
+// MAL: mezclar UI, API y reglas de negocio en un solo archivo suelto
+// BIEN: WidgetCard (UI) + useCpuWidget (orquestación) + metricsService (datos)
+```

@@ -1,0 +1,21 @@
+---
+description: Nombres de archivos, símbolos y constantes en Dashboard PC
+alwaysApply: true
+---
+
+# Nomenclatura
+
+Un nombre bueno evita comentarios. Sé específico al dominio del dashboard (`cpuPercent`, no `value`).
+
+| Cosa | Convención | Ejemplo |
+|---|---|---|
+| Componentes / clases / tipos | PascalCase | `CpuWidget`, `SystemMetrics` |
+| Funciones, hooks, variables | camelCase | `useCpuMetrics`, `isLoading` |
+| Constantes reales | UPPER_SNAKE | `POLL_INTERVAL_MS` |
+| Archivos | igual que el export | `CpuWidget.tsx`, `useCpuMetrics.ts` |
+| Eventos / handlers | `on` + hecho | `onRetry`, `onWidgetRemove` |
+| Booleanos | `is` / `has` / `can` | `isOnline`, `hasPermission` |
+
+- Un archivo, un export principal. Re-exporta extras por `index`.
+- Prohibido: `utils.ts` gigante, `helpers2`, `newFile`, `temp`.
+- Evita abreviaturas salvo las del dominio (`cpu`, `gpu`, `ram`, `id`).

@@ -1,0 +1,28 @@
+---
+description: Dónde vive el estado y cómo se actualizan los datos del dashboard
+alwaysApply: true
+---
+
+# Estado y datos
+
+Una sola fuente de verdad por dato. El widget no “inventa” métricas: las pide a un servicio y muestra el estado.
+
+## Dónde va cada cosa
+
+- **Servidor / OS / API:** fetch, permisos, normalización, caché corta.
+- **Store global:** solo lo que varias features necesitan (sesión, tema, layout).
+- **Estado local:** UI efímera (modal abierto, tab activo, hover).
+- **URL:** filtros y vistas que el usuario esperaría compartir o recargar.
+
+No dupliques el mismo valor en store + local + props. El flujo es: servicio → store/hook → UI.
+
+## Datos en vivo
+
+- Un único intervalo o suscripción por fuente; se limpia al desmontar.
+- Backoff si falla el polling. No martilles un recurso caído.
+- Timestamps en los datos; no mezcles lecturas de distintos ciclos como si fueran una.
+
+```ts
+// MAL: setInterval dentro de 4 widgets que piden la misma CPU
+// BIEN: metricsService.subscribe("cpu") y cada widget se suscribe al mismo stream
+```

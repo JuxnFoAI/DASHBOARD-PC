@@ -1,0 +1,23 @@
+---
+description: Qué testear y cómo, sin teatro de cobertura
+alwaysApply: true
+---
+
+# Pruebas
+
+Si el cambio puede romperse en silencio (métricas, parseo, permisos, reglas de negocio), lleva test. La UI puramente visual no exige un test por pixel.
+
+## Qué cubrir
+
+- Funciones puras: conversiones, umbrales, formateo, validación.
+- Servicios: éxito, error, timeout, dato malformado (mock de red/OS).
+- Un flujo crítico por feature (p. ej. “widget CPU muestra error y permite reintentar”).
+
+## Cómo
+
+- Nombre del test = comportamiento: `toCpuPercent returns 0 when total is 0`.
+- Un assert principal por test. Sin dependencias de orden entre tests.
+- No testees detalles de implementación (nombres internos, CSS).
+- Coloca el test junto al módulo o en `__tests__` / `*.test.ts` según el runner del repo. Sé consistente.
+
+Si aún no hay runner, no inventes uno en un cambio ajeno: menciónalo y prioriza tests cuando el usuario arme el scaffolding.
