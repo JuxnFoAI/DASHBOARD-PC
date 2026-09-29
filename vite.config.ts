@@ -24,6 +24,8 @@ export default defineConfig({
   },
   test: {
     environment: "node",
-    include: ["src/**/*.test.ts"],
+    // Incluye .tsx para que un test de componente falle a la vista en vez de
+    // quedar fuera de la suite sin aviso. Requiere un entorno con DOM.
+    include: ["src/**/*.test.{ts,tsx}"],
   },
 });
