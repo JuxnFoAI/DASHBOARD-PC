@@ -6,6 +6,16 @@ Tablero de tareas en el navegador. Los datos se quedan en este equipo. Con clave
 
 Demo: [juxnfoai.github.io/DASHBOARD-PC](https://juxnfoai.github.io/DASHBOARD-PC/). Es la misma app: lo que escribas ahí se queda en tu navegador.
 
+## Pantallas
+
+| La puerta: eliges clave o entras sin ella | El tablero, en la vista En curso |
+| --- | --- |
+| ![Pantalla de entrada con un candado rojo, el campo de clave enfocado, el botón Desbloquear y la opción de continuar sin clave.](docs/captura-entrada.png) | ![Tablero con el conteo de cada vista arriba y cuatro tareas en curso, cada una con estado, fecha y nota.](docs/captura-tablero.png) |
+
+Gráficas cuenta esas mismas vistas.
+
+![Gráfica circular de 11 tareas repartidas en vencidas, por hacer, en curso, hechas y bloqueadas, con la leyenda y la lista de tareas debajo.](docs/captura-graficas.png)
+
 ## Mapa
 
 Cada color es un grupo. El centro es la app.
