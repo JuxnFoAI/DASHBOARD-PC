@@ -1,6 +1,10 @@
 # Dashboard PC
 
+[![CI](https://github.com/JuxnFoAI/DASHBOARD-PC/actions/workflows/ci.yml/badge.svg)](https://github.com/JuxnFoAI/DASHBOARD-PC/actions/workflows/ci.yml)
+
 Tablero de tareas en el navegador. Los datos se quedan en este equipo. Con clave, van cifrados. Sin clave, quedan en claro en este navegador.
+
+Demo: [juxnfoai.github.io/DASHBOARD-PC](https://juxnfoai.github.io/DASHBOARD-PC/). Es la misma app: lo que escribas ahí se queda en tu navegador.
 
 ## Mapa
 
@@ -25,7 +29,9 @@ npm run dev
 
 Queda en `http://localhost:5173`. La primera vez eliges la clave (mínimo 8 caracteres) o entras sin clave.
 
-`npm test` corre las pruebas. `npm run lint` el lint. `npm run build` deja el build en `dist/`. `npm run preview` lo sirve.
+`npm test` corre las pruebas. `npm run lint` el lint. `npm run typecheck` los tipos. `npm run build` deja el build en `dist/`. `npm run preview` lo sirve.
+
+En cada push a `master` y en cada pull request, GitHub Actions repite lint, tipos, pruebas y build. La demo se publica sola en GitHub Pages cuando las pruebas y el build pasan.
 
 ## La clave
 
